@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    image: docker-php-apache:latest
+    ports:
+      - "8080:80"
+    container_name: docker-php-apache
+    volumes:
+      - ./app:/var/www/html/
